@@ -1,0 +1,79 @@
+
+html {
+    height: 100%;
+}
+.d-none { 
+    display: none;
+}
+.tooltip-content { 
+    background-color: #F2F9FF;
+    padding: 16px;
+    border: 1px solid #757575;
+    border-radius: 0.25rem;
+    max-width: 200px;
+    position:absolute;
+    z-index: 1;
+    margin-top: .5rem;
+    &::before {
+        content: " ";
+        width: 0.5625rem;
+        height: 0.4375rem;
+        background-image: url('/images/tooltip-arrow.svg');
+        background-repeat: no-repeat;
+        transform: rotate(180deg);
+        position: absolute;
+        bottom: 100%;
+        left: 0.625rem;
+    }
+    &.tt-bottom::before {
+        bottom: unset;
+        transform: rotate(0deg);
+        top: 100%;
+    }
+    &.tt-top-mid::before {
+        left: calc(50% - 0.28125rem);
+    }
+    &.tt-top-right::before  {
+        left: unset;
+        right: 0.625rem;
+    }
+}
+.tooltip-info, .tooltip-help {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    &:focus-visible {
+        outline: 2px solid #1560BD;
+    }
+}
+.tooltip-info {
+    background-image: url('/images/info-icon-default.svg');
+    &:hover {
+        background-image: url('/images/info-icon-hover.svg');
+    }
+    &:active, &.active {
+        background-image: url('/images/info-icon-selected.svg');
+    }
+}
+.tooltip-help {
+    background-image: url('/images/help-icon-default.svg');
+    &:hover {
+        background-image: url('/images/help-icon-hover.svg');
+        }
+    &:active, &.active {
+        background-image: url('/images/help-icon-selected.svg');
+    }
+}
+.tooltip-icon-pos {
+    margin-left: -0.46rem;
+    margin-bottom: 0.15rem;
+    &.tt-top-right {
+        margin-left: unset;
+        margin-right: -0.46rem;
+    }
+    &.tt-top-mid {
+        margin-left: unset;
+    }
+}
