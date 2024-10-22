@@ -6,10 +6,12 @@ A lightweight, accessible tooltip component that provides informational and help
 
 - Two tooltip styles: Info (ℹ️) and Help (?)
 - Multiple positioning options that automatically adjust based on viewport position:
-  - Top left (default)
+  - Top left 
   - Top center
   - Top right
-  - Bottom
+  - Bottom left
+  - Bottom center
+  - Bottom right
 - Full keyboard accessibility
 - Automatic repositioning on window resize
 - Close on escape key, scroll, or click outside
